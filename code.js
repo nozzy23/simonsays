@@ -79,7 +79,15 @@ function handleClick(tile){
         return;
     }
 
+
+
     if(humanSequence.length === compSequence.length) {
+
+        if (humanSequence.length === 20){
+            resetGame("you won!");
+            return
+        }
+
         humanSequence = [];
         info.textContent = 'Success! Keep Going';
         setTimeout(() => {
